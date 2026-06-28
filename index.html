@@ -4,87 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" media="print" onload="this.media='all'">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <title>CURRÍCULO ONLINE</title>
+    <title>Lucas Oliveira | Desenvolvedor Full Stack</title>
 </head>
 <body>
+
+    <!-- BARRA DE PROGRESSO -->
+    <div id="progress-bar"></div>
+
+    <!-- NAV -->
+    <nav id="nav">
+        <a href="#sobre" class="nav-logo">Lucas<span>Dev</span></a>
+        <ul>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#experiencia">Experiência</a></li>
+            <li><a href="#tecnologias">Tecnologias</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contato" class="btn-contato">Contato</a></li>
+        </ul>
+        <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </nav>
+
     <header>
-
-        <img src="imagem/perfil.jfif" alt="Foto de Lucas Oliveira">
-
+        <img src="imagem/perfil.jfif" alt="Foto de Lucas Oliveira" fetchpriority="high">
         <div class="informacoes">
-
             <h1>Lucas Oliveira</h1>
-
             <h2>Desenvolvedor Full Stack</h2>
-
             <div class="dados">
-                <p>24 anos</p>
-                <p>Curitiba - PR</p>
-                <p>lucas.oliveira@gmail.com</p>
+                <p><i class="fa-solid fa-cake-candles"></i> 24 anos</p>
+                <p><i class="fa-solid fa-location-dot"></i> Curitiba - PR</p>
+                <p><i class="fa-solid fa-envelope"></i> lucas.oliveira@gmail.com</p>
             </div>
-
             <div class="redes">
-
-                <a href="#" target="_blank">
-                    <!-- WhatsApp -->
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-
-                <a href="#" target="_blank">
-                    <!-- LinkedIn -->
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-
-                <a href="#" target="_blank">
-                    <!-- GitHub -->
-                    <i class="fa-brands fa-github"></i>
-                </a>
-
+                <a href="#" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
             </div>
-
             <div class="botoes">
-
-                <a href="curriculo.pdf" download>Baixar PDF</a>
-
+                <a href="curriculo.pdf" download><i class="fa-solid fa-download"></i> Baixar PDF</a>
             </div>
-
         </div>
-
     </header>
 
     <main>
 
-        <section id="sobre">
-
+        <section id="sobre" class="reveal">
             <h2>Sobre Mim</h2>
-
-            <p>
-                Desenvolvedor Full Stack apaixonado por tecnologia e inovação.
-                Possuo experiência no desenvolvimento de aplicações web modernas,
-                focando em desempenho, organização e boas práticas de programação.
-                Busco sempre aprender novas tecnologias e contribuir com soluções
-                que gerem resultados para empresas e usuários.
-            </p>
-
+            <p>Desenvolvedor Full Stack apaixonado por tecnologia e inovação. Possuo experiência no desenvolvimento de aplicações web modernas, focando em desempenho, organização e boas práticas de programação. Busco sempre aprender novas tecnologias e contribuir com soluções que gerem resultados para empresas e usuários.</p>
         </section>
 
-        <section id="experiencia">
-
+        <section id="experiencia" class="reveal">
             <h2>Experiência Profissional</h2>
-
             <article>
-
                 <h3>Desenvolvedor Full Stack</h3>
-
                 <h4>Tech Solutions Ltda.</h4>
-
                 <span>Jan/2024 - Atual</span>
-
                 <ul>
                     <li>Desenvolvimento de aplicações web</li>
                     <li>Criação de Landing Pages</li>
@@ -92,307 +71,179 @@
                     <li>Manutenção de sistemas</li>
                     <li>Otimização de desempenho</li>
                 </ul>
-
             </article>
-
             <article>
-
                 <h3>Desenvolvedor Front-end</h3>
-
                 <h4>Digital Agency</h4>
-
                 <span>Fev/2023 - Dez/2023</span>
-
                 <ul>
                     <li>Desenvolvimento de interfaces responsivas</li>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>JavaScript</li>
+                    <li>HTML5, CSS3 e JavaScript</li>
                     <li>Bootstrap</li>
                 </ul>
-
             </article>
-
         </section>
 
-        <section id="formacao">
-
+        <section id="formacao" class="reveal">
             <h2>Formação</h2>
-
             <article>
-
                 <h3>Bacharelado em Ciência da Computação</h3>
-
                 <p>Universidade Federal do Paraná</p>
-
                 <span>2022 - 2026</span>
-
             </article>
-
         </section>
 
-        <section id="tecnologias">
-
-        <h2>Tecnologias</h2>
-
+        <section id="tecnologias" class="reveal">
+            <h2>Tecnologias</h2>
             <div class="tecnologias">
-
                 <article class="tecnologia">
                     <i class="fa-brands fa-html5"></i>
                     <h3>HTML5</h3>
                 </article>
-
                 <article class="tecnologia">
                     <i class="fa-brands fa-css3-alt"></i>
                     <h3>CSS3</h3>
                 </article>
-
                 <article class="tecnologia">
                     <i class="fa-brands fa-js"></i>
                     <h3>JavaScript</h3>
                 </article>
-
                 <article class="tecnologia">
                     <i class="fa-brands fa-java"></i>
                     <h3>Java</h3>
                 </article>
-
                 <article class="tecnologia">
                     <i class="fa-solid fa-leaf"></i>
                     <h3>Spring Boot</h3>
                 </article>
-
                 <article class="tecnologia">
                     <i class="fa-solid fa-database"></i>
                     <h3>MySQL</h3>
                 </article>
-
                 <article class="tecnologia">
                     <i class="fa-brands fa-git-alt"></i>
                     <h3>Git</h3>
                 </article>
-
                 <article class="tecnologia">
                     <i class="fa-brands fa-github"></i>
                     <h3>GitHub</h3>
                 </article>
-
                 <article class="tecnologia">
                     <i class="fa-brands fa-figma"></i>
                     <h3>Figma</h3>
                 </article>
-
             </div>
-
         </section>
 
-        <section id="habilidades">
-
+        <section id="habilidades" class="reveal">
             <h2>Habilidades</h2>
-
-                <div class="skill">
-
-                    <span>HTML5</span>
-
-                    <div class="barra">
-                        <div class="progresso" data-width="95%"></div>
-                    </div>
-
-                </div>
-
-                <div class="skill">
-
-                    <span>CSS3</span>
-
-                    <div class="barra">
-                        <div class="progresso" data-width="92%"></div>
-                    </div>
-
-                </div>
-
-                <div class="skill">
-
-                    <span>JavaScript</span>
-
-                    <div class="barra">
-                        <div class="progresso" data-width="88%"></div>
-                    </div>
-
-                </div>
-
-                <div class="skill">
-
-                    <span>Java</span>
-
-                    <div class="barra">
-                        <div class="progresso" data-width="82%"></div>
-                    </div>
-
-                </div>
-
-                <div class="skill">
-
-                    <span>Spring Boot</span>
-
-                    <div class="barra">
-                        <div class="progresso" data-width="75%"></div>
-                    </div>
-
-                </div>
-
-                <div class="skill">
-
-                    <span>MySQL</span>
-
-                    <div class="barra">
-                        <div class="progresso" data-width="80%"></div>
-                    </div>
-
-                </div>
-
-                <div class="skill">
-
-                    <span>Git</span>
-
-                    <div class="barra">
-                        <div class="progresso" data-width="90%"></div>
-                    </div>
-
-                </div>
-
-                <div class="skill">
-
-                    <span>GitHub</span>
-
-                    <div class="barra">
-                        <div class="progresso" data-width="90%"></div>
-                    </div>
-
-                </div>
-
-                <div class="skill">
-
-                    <span>Figma</span>
-
-                    <div class="barra">
-                        <div class="progresso" data-width="70%"></div>
-                    </div>
-
-                </div>
-
+            <div class="skill"><span>HTML5</span><div class="barra"><div class="progresso" data-width="95%"></div></div></div>
+            <div class="skill"><span>CSS3</span><div class="barra"><div class="progresso" data-width="92%"></div></div></div>
+            <div class="skill"><span>JavaScript</span><div class="barra"><div class="progresso" data-width="88%"></div></div></div>
+            <div class="skill"><span>Java</span><div class="barra"><div class="progresso" data-width="82%"></div></div></div>
+            <div class="skill"><span>Spring Boot</span><div class="barra"><div class="progresso" data-width="75%"></div></div></div>
+            <div class="skill"><span>MySQL</span><div class="barra"><div class="progresso" data-width="80%"></div></div></div>
+            <div class="skill"><span>Git</span><div class="barra"><div class="progresso" data-width="90%"></div></div></div>
+            <div class="skill"><span>GitHub</span><div class="barra"><div class="progresso" data-width="90%"></div></div></div>
+            <div class="skill"><span>Figma</span><div class="barra"><div class="progresso" data-width="70%"></div></div></div>
         </section>
 
-        <section id="cursos">
-
+        <section id="cursos" class="reveal">
             <h2>Cursos</h2>
-
-            <ul>
-
-                <li>Java Completo</li>
-                <li>Spring Boot</li>
-                <li>HTML5 e CSS3</li>
-                <li>JavaScript Moderno</li>
-                <li>Git e GitHub</li>
-                <li>Banco de Dados MySQL</li>
-                <li>Desenvolvimento Web Responsivo</li>
-
-            </ul>
-
+            <div class="cards-lista">
+                <div class="card-item"><i class="fa-solid fa-graduation-cap"></i><span>Java Completo</span></div>
+                <div class="card-item"><i class="fa-solid fa-graduation-cap"></i><span>Spring Boot</span></div>
+                <div class="card-item"><i class="fa-solid fa-graduation-cap"></i><span>HTML5 e CSS3</span></div>
+                <div class="card-item"><i class="fa-solid fa-graduation-cap"></i><span>JavaScript Moderno</span></div>
+                <div class="card-item"><i class="fa-solid fa-graduation-cap"></i><span>Git e GitHub</span></div>
+                <div class="card-item"><i class="fa-solid fa-graduation-cap"></i><span>Banco de Dados MySQL</span></div>
+                <div class="card-item"><i class="fa-solid fa-graduation-cap"></i><span>Desenvolvimento Web Responsivo</span></div>
+            </div>
         </section>
 
-        <section id="certificacoes">
-
+        <section id="certificacoes" class="reveal">
             <h2>Certificações</h2>
-
-                <ul>
-
-                    <li>Java Completo - Curso em Vídeo</li>
-
-                    <li>HTML5 e CSS3 - Curso em Vídeo</li>
-
-                    <li>JavaScript Moderno - Alura</li>
-
-                    <li>Git e GitHub - Udemy</li>
-
-                    <li>Spring Boot Essentials - Rocketseat</li>
-
-                </ul>
-
+            <div class="cards-lista">
+                <div class="card-item"><i class="fa-solid fa-certificate"></i><span>Java Completo — Curso em Vídeo</span></div>
+                <div class="card-item"><i class="fa-solid fa-certificate"></i><span>HTML5 e CSS3 — Curso em Vídeo</span></div>
+                <div class="card-item"><i class="fa-solid fa-certificate"></i><span>JavaScript Moderno — Alura</span></div>
+                <div class="card-item"><i class="fa-solid fa-certificate"></i><span>Git e GitHub — Udemy</span></div>
+                <div class="card-item"><i class="fa-solid fa-certificate"></i><span>Spring Boot Essentials — Rocketseat</span></div>
+            </div>
         </section>
 
-        <section id="idiomas">
-
+        <section id="idiomas" class="reveal">
             <h2>Idiomas</h2>
-
-            <ul>
-
-                <li>Português — Nativo</li>
-                <li>Inglês — Intermediário</li>
-                <li>Espanhol — Básico</li>
-
-            </ul>
-
+            <div class="cards-lista">
+                <div class="card-item"><i class="fa-solid fa-language"></i><span>Português — Nativo</span></div>
+                <div class="card-item"><i class="fa-solid fa-language"></i><span>Inglês — Intermediário</span></div>
+                <div class="card-item"><i class="fa-solid fa-language"></i><span>Espanhol — Básico</span></div>
+            </div>
         </section>
 
-        <section id="projetos">
-
+        <section id="projetos" class="reveal">
             <h2>Projetos</h2>
-
-            <article>
-
+            <article class="projeto-card">
+                <i class="fa-solid fa-chart-line"></i>
                 <h3>Sistema Financeiro</h3>
-
                 <p>Sistema para controle financeiro pessoal.</p>
-
             </article>
-
-            <article>
-
+            <article class="projeto-card">
+                <i class="fa-solid fa-laptop-code"></i>
                 <h3>Landing Page Empresarial</h3>
-
                 <p>Página moderna para empresas.</p>
-
             </article>
-
-            <article>
-
+            <article class="projeto-card">
+                <i class="fa-solid fa-address-card"></i>
                 <h3>Portfólio Profissional</h3>
-
                 <p>Site responsivo para apresentação de projetos.</p>
-
             </article>
-
-            <article>
-
+            <article class="projeto-card">
+                <i class="fa-solid fa-database"></i>
                 <h3>Sistema de Cadastro</h3>
-
                 <p>Aplicação CRUD integrada ao MySQL.</p>
-
             </article>
-
         </section>
 
-        <section id="contato">
-
+        <section id="contato" class="reveal">
             <h2>Contato</h2>
-
-            <p>📧 lucas.oliveira@gmail.com</p>
-            <p>📱 (41) 99999-1234</p>
-            <p>💼 linkedin.com/in/lucasoliveira</p>
-            <p>💻 github.com/lucasoliveira</p>
-
+            <div class="contato-itens">
+                <a href="mailto:lucas.oliveira@gmail.com" class="contato-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>lucas.oliveira@gmail.com</span>
+                </a>
+                <a href="tel:41999991234" class="contato-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>(41) 99999-1234</span>
+                </a>
+                <a href="#" target="_blank" class="contato-item">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span>linkedin.com/in/lucasoliveira</span>
+                </a>
+                <a href="#" target="_blank" class="contato-item">
+                    <i class="fa-brands fa-github"></i>
+                    <span>github.com/lucasoliveira</span>
+                </a>
+            </div>
         </section>
 
     </main>
 
     <footer>
-
-        <p>Desenvolvido por RCTech Soluções Web</p>
-
+        <p>© 2025 Lucas Oliveira</p>
+        <div class="footer-redes">
+            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+        <p>Desenvolvido por <strong>RCTech</strong></p>
     </footer>
 
-    <script src="js/script.js">
-        
-    </script>
+    <!-- BOTÃO FLUTUANTE -->
+    <a href="#" target="_blank" class="wpp-float" aria-label="WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

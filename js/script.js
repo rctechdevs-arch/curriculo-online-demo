@@ -1,23 +1,29 @@
-const barras = document.querySelectorAll(".progresso");
+// BARRA DE PROGRESSO
+const progressBar = document.getElementById('progress-bar')
+window.addEventListener('scroll', () => {
+    const total = document.documentElement.scrollHeight - window.innerHeight
+    progressBar.style.width = (window.scrollY / total * 100) + '%'
+})
 
-const observer = new IntersectionObserver((entries)=>{
+// MENU MOBILE
+const menuToggle = document.getElementById('menuToggle')
+const navUl = document.querySelector('#nav ul')
+menuToggle.addEventListener('click', () => navUl.classList.toggle('aberto'))
+document.querySelectorAll('#nav a').forEach(link => {
+    link.addEventListener('click', () => navUl.classList.remove('aberto'))
+})
 
-    entries.forEach(entry=>{
-
-        if(entry.isIntersecting){
-
-            const barra = entry.target;
-
-            barra.style.width = barra.dataset.width;
-
+// REVEAL + BARRAS
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visivel')
+            entry.target.querySelectorAll('.progresso').forEach(barra => {
+                barra.style.width = barra.dataset.width
+            })
+            observer.unobserve(entry.target)
         }
+    })
+}, { threshold: 0.1 })
 
-    });
-
-});
-
-barras.forEach(barra=>{
-
-    observer.observe(barra);
-
-});
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el))
