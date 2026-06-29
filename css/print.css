@@ -1,0 +1,67 @@
+@media print {
+
+    /* Esconde o que não precisa no PDF */
+    nav,
+    .botoes,
+    .wpp-float,
+    #progress-bar,
+    footer {
+        display: none !important;
+    }
+
+    /* Reset geral */
+    * {
+        box-shadow: none !important;
+        animation: none !important;
+        transition: none !important;
+    }
+
+    body {
+        background: white !important;
+        color: black !important;
+        font-size: 12pt;
+    }
+
+    /* Header limpo */
+    header {
+        background: #0F172A !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        padding: 30px !important;
+    }
+
+    /* Seções sem hover e sem sombra */
+    section {
+        margin-bottom: 16pt !important;
+        padding: 20pt !important;
+        border-radius: 0 !important;
+        break-inside: avoid;
+    }
+
+    /* Links viram texto */
+    a {
+        color: black !important;
+        text-decoration: none !important;
+    }
+
+    /* Barras de habilidade coloridas */
+    .progresso {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    /* Tecnologias em grid menor */
+    .tecnologias {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+
+    /* Projetos em grid */
+    #projetos {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* Garante que não corta no meio de um artigo */
+    article {
+        break-inside: avoid;
+    }
+}
