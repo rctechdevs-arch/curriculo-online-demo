@@ -64,4 +64,25 @@
     article {
         break-inside: avoid;
     }
+
+      @page {
+        size: A4 portrait;
+        margin: 15mm;
+    }
+
+    html, body {
+        width: 210mm;
+        height: auto !important;
+    }
+
+    /* Remove páginas em branco */
+    section {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    header {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
 }
